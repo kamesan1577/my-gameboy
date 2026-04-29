@@ -8,3 +8,7 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Launcher runtime files
+.pending_game
+launch.log

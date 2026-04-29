@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=My Gameboy Launcher
-Exec=bash -c 'cd __REPO_DIR__ && while true; do uv run main.py; done'
+Exec=bash -c 'cd __REPO_DIR__ && uv run launcher_wrapper.py'
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true

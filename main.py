@@ -1,6 +1,5 @@
 import os
 import subprocess
-import sys
 import pyxel
 
 # ---- 画面設定 ----
@@ -34,10 +33,7 @@ class Launcher:
         self.games = _scan_games()
         self.selected = 0
         self.scroll = 0
-        self.pending_launch = None
         pyxel.run(self.update, self.draw)
-        if self.pending_launch:
-            _run_game(self.pending_launch)
 
     # ---------------------------------------------------------------- update
     def update(self):
@@ -56,7 +52,9 @@ class Launcher:
             self._request_launch(self.games[self.selected]["path"])
 
     def _request_launch(self, path):
-        self.pending_launch = path
+        launcher_dir = os.path.dirname(os.path.abspath(__file__))
+        with open(os.path.join(launcher_dir, ".pending_game"), "w") as f:
+            f.write(path)
         pyxel.quit()
 
     def _move(self, delta):
@@ -106,12 +104,6 @@ def _scan_games():
     return result
 
 
-def _run_game(path):
-    launcher_dir = os.path.dirname(os.path.abspath(__file__))
-    wrapper = os.path.join(launcher_dir, "run_fullscreen.py")
-    subprocess.run(["uv", "run", wrapper, path], cwd=launcher_dir)
-    subprocess.Popen(["uv", "run", "main.py"], cwd=launcher_dir)
-    sys.exit(0)
 
 
 def _draw_header():
