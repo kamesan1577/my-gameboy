@@ -99,7 +99,9 @@ def _scan_games():
 
 
 def _launch(path):
-    subprocess.Popen(["uv", "run", path])
+    launcher_dir = os.path.dirname(os.path.abspath(__file__))
+    wrapper = os.path.join(launcher_dir, "run_fullscreen.py")
+    subprocess.Popen(["uv", "run", wrapper, path])
     pyxel.quit()
 
 
