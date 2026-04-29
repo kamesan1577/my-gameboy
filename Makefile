@@ -28,7 +28,7 @@ install-deps:
 	sudo apt-get update -q
 	sudo apt-get install -y python3-evdev
 	@echo "Installing Python packages..."
-	sudo pip install gpiozero python-uinput
+    sudo pip install --break-system-packages gpiozero python-uinput
 	@echo "Running uv sync..."
 	cd $(REPO_DIR) && uv sync
 
