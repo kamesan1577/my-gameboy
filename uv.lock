@@ -1,0 +1,28 @@
+version = 1
+revision = 3
+requires-python = ">=3.11"
+
+[[package]]
+name = "my-gameboy"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "pyxel" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pyxel", specifier = ">=2.9.3" }]
+
+[[package]]
+name = "pyxel"
+version = "2.9.3"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/40/bf/b24d780d12fcdf446e8db2568b06807c7372165fcf26daa040fe7433b925/pyxel-2.9.3-cp310-abi3-macosx_10_13_x86_64.whl", hash = "sha256:4a809f1c6ef38318c345ef750e3ce43b5dfff742e382cd2c062b7b405f6712de", size = 6874672, upload-time = "2026-04-27T11:36:26.964Z" },
+    { url = "https://files.pythonhosted.org/packages/23/ce/d99cc1f035ad1ab952245f0b2b0ec3be6038f1c1fb32be41299d077f81e0/pyxel-2.9.3-cp310-abi3-macosx_11_0_arm64.whl", hash = "sha256:d2e83d16c788b8e3a468754d8dd9e462469db1f86cd021e420e73ced3a3a22a9", size = 6598939, upload-time = "2026-04-27T11:36:29.188Z" },
+    { url = "https://files.pythonhosted.org/packages/bc/e7/7c10e5cfc0738136cf351038ed2d597760ff7566a818fc3381723223840e/pyxel-2.9.3-cp310-abi3-manylinux_2_28_aarch64.whl", hash = "sha256:791e25ee3e460115f62f47ac32d655e3239f07064384621c210b73103dac5b10", size = 7126930, upload-time = "2026-04-27T11:36:30.461Z" },
+    { url = "https://files.pythonhosted.org/packages/3c/fa/75ef8bf4f8bf762dbee8bc68106629d993f779e539ef49a2a5274e5a077f/pyxel-2.9.3-cp310-abi3-manylinux_2_28_armv7l.whl", hash = "sha256:188960a4ebb807d10a85baf68c11d84765d0b0f0038744996e57e5ca1bd3c89e", size = 7177323, upload-time = "2026-04-27T11:36:32.041Z" },
+    { url = "https://files.pythonhosted.org/packages/70/99/9c153e23af5efce3ee6ddc7188040779f79b24f5ff8abe3b94a73ef68dc0/pyxel-2.9.3-cp310-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:18fcaa0aa3f408407d7b40d614f73b985bf6e75646c031f0146b605abe1ef7b8", size = 7443974, upload-time = "2026-04-27T11:36:34.229Z" },
+    { url = "https://files.pythonhosted.org/packages/7f/8e/23c7dbf02154d191458fd853f2a9b0a8b05f91d7c2a45b7cc403c69160f3/pyxel-2.9.3-cp310-abi3-win32.whl", hash = "sha256:2358ab22128b5b46d3a7be9f403642d82ab3ebf8d31c69135526e9926eef60ed", size = 6586936, upload-time = "2026-04-27T11:36:37.621Z" },
+    { url = "https://files.pythonhosted.org/packages/9a/38/ab2db39aadf375691b485a61adc382fb556e6622080e55924079b684e32b/pyxel-2.9.3-cp310-abi3-win_amd64.whl", hash = "sha256:46133f89fa7e736c16d9cf2f179a3f862cb2d665b303412b2873378784ab501d", size = 6807663, upload-time = "2026-04-27T11:36:36.175Z" },
+]
