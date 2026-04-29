@@ -1,0 +1,13 @@
+[Unit]
+Description=GPIO Button to uinput Driver for My Gameboy
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 __REPO_DIR__/gpio_driver.py
+Restart=on-failure
+RestartSec=3
+User=root
+
+[Install]
+WantedBy=multi-user.target
