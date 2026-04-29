@@ -29,6 +29,7 @@ class Launcher:
     def __init__(self):
         pyxel.init(W, H, title="My Gameboy Launcher", fps=30,
                    quit_key=pyxel.KEY_ESCAPE, display_scale=3)
+        pyxel.fullscreen(True)
         self.games = _scan_games()
         self.selected = 0
         self.scroll = 0
